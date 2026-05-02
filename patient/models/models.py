@@ -3,9 +3,9 @@
 from odoo import models, fields, api
 
 
-class my__module(models.Model):
-    _name = 'my__module.my__module'
-    _description = 'my__module.my__module'
+class patient(models.Model):
+    _name = 'patient.patient'
+    _description = 'patient.patient'
 
     name = fields.Char()
     value = fields.Integer()
