@@ -9,3 +9,5 @@ class patient(models.Model):
 
     name = fields.Char()
     middle_name = fields.Char()
+    last_name = fields.Char()
+    dob = fields.Date(string="Date of birth", default=fields.Date.context_today, required=True)
