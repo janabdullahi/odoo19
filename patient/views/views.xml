@@ -1,7 +1,7 @@
 <odoo>
   <data>
-    <!-- explicit list view definition -->
 
+    <!-- explicit list view definition -->
     <record model="ir.ui.view" id="patient.list">
       <field name="name">patient list</field>
       <field name="model">patient.patient</field>
@@ -14,8 +14,19 @@
     </record>
 
 
-    <!-- actions opening views on models -->
+    <!-- actions opening form views on models -->
+    <record model="ir.ui.view" id="patient.form">
+        <field name="name">patient form</field>
+        <field name="model">patient.patient</field>
+        <field name="arch" type="xml">
+          <list>
+            <field name="name"/>
+          </list>
+        </field>
+    </record>
 
+
+    <!-- actions opening views on models -->
     <record model="ir.actions.act_window" id="patient.action_window">
       <field name="name">Patient</field>
       <field name="res_model">patient.patient</field>
