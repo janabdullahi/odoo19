@@ -17,43 +17,14 @@
     <!-- actions opening views on models -->
 
     <record model="ir.actions.act_window" id="patient.action_window">
-      <field name="name">patient window</field>
+      <field name="name">Patient</field>
       <field name="res_model">patient.patient</field>
       <field name="view_mode">list,form</field>
     </record>
 
 
-    <!-- server action to the one above -->
-
-    <record model="ir.actions.server" id="patient.action_server">
-      <field name="name">patient server</field>
-      <field name="model_id" ref="model_patient_patient"/>
-      <field name="state">code</field>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "list,form",
-          "res_model": model._name,
-        }
-      </field>
-    </record>
-
-
     <!-- Top menu item -->
-
-    <menuitem name="patient" id="patient.menu_root"/>
-
-    <!-- menu categories -->
-
-    <menuitem name="Menu 1" id="patient.menu_1" parent="patient.menu_root"/>
-    <menuitem name="Menu 2" id="patient.menu_2" parent="patient.menu_root"/>
-
-    <!-- actions -->
-
-    <menuitem name="List" id="patient.menu_1_list" parent="patient.menu_1"
-              action="patient.action_window"/>
-    <menuitem name="Server to list" id="patient" parent="patient.menu_2"
-              action="patient.action_server"/>
+    <menuitem name="Patient" id="patient.menu_root" action="patient.action_window"/>
 
   </data>
 </odoo>
